@@ -28,7 +28,7 @@ const textures = {
   img1: textureLoader.load('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg'),
   img2: textureLoader.load('https://images.pexels.com/photos/31979794/pexels-photo-31979794.jpeg'),
   img3: textureLoader.load('https://images.pexels.com/photos/18263146/pexels-photo-18263146.jpeg'),
-  disp: textureLoader.load('/displacement-textures/disp1.jpg')
+  disp: textureLoader.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/rock-_disp.png')
 };
 
 // =============================================================================

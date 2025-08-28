@@ -122,7 +122,7 @@ class Slider {
     })
     
     this.disp = loader.load(
-      '/displacement-textures/disp1.jpg', 
+      'https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/rock-_disp.png', 
       this.render,
       undefined,
       (error) => console.error('Error loading displacement texture:', error)
