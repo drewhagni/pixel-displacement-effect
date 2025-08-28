@@ -1,0 +1,399 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pixel Displacement Transition Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+    <!--
+    <nav class="nav nav--left js-nav">
+      <ul>
+        <li>
+          <a href="#"><span>Mens</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Womens</span></a>
+        </li>
+        <li>
+          <a href="#" class="is-active"><span>Collections</span></a>
+        </li>
+      </ul>
+    </nav>
+    
+    <figure class="logo">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/logo_copy_copy.svg">
+    </figure>
+    
+    <nav class="nav nav--right">
+      <ul>
+        <li>
+          <a href="https://twitter.com/Jesper_Landberg?lang=en" target="_blank"><span>Say hi</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Cart</span>
+            <div class="cart-total">0</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    -->
+    
+    <div class="slider js-slider">
+      <div class="slider__inner js-slider__inner"></div>
+      
+      <div class="slide js-slide">
+        <div class="slide__content">
+          <figure class="slide__img js-slide__img">
+            <img src="https://images.pexels.com/photos/31199968/pexels-photo-31199968.jpeg">
+          </figure>
+           <figure class="slide__img js-slide__img">
+            <img src="https://images.pexels.com/photos/31816617/pexels-photo-31816617.jpeg">
+          </figure>
+        </div>
+        
+        <div class="slider__text js-slider__text">
+          <div class="slider__text-line js-slider__text-line"><div>ThreeJS Image</div></div>
+          <div class="slider__text-line js-slider__text-line"><div>Pixel Displacement</div></div>
+          <div class="slider__text-line js-slider__text-line"><div>Transition Effect</div></div>
+        </div>
+        
+      </div>
+      
+      <div class="slide js-slide">
+        <div class="slide__content">
+          <figure class="slide__img js-slide__img">
+            <img src="https://images.pexels.com/photos/33503143/pexels-photo-33503143.jpeg">
+          </figure>
+           <figure class="slide__img js-slide__img">
+            <img src="https://images.pexels.com/photos/31816617/pexels-photo-31816617.jpeg">
+          </figure>
+        </div>
+      </div>
+      
+      <div class="slide js-slide">
+        <div class="slide__content">
+          <figure class="slide__img js-slide__img">
+            <img src="https://images.pexels.com/photos/33444774/pexels-photo-33444774.jpeg">
+          </figure>
+           <figure class="slide__img js-slide__img">
+            <img src="https://images.pexels.com/photos/33269728/pexels-photo-33269728.jpeg">
+          </figure>
+        </div>
+      </div>
+      
+      <nav class="slider__nav js-slider__nav">
+        <div class="slider-bullet js-slider-bullet">
+          <span class="slider-bullet__text js-slider-bullet__text">01</span>
+          <span class="slider-bullet__line js-slider-bullet__line"></span>
+        </div>
+         <div class="slider-bullet js-slider-bullet">
+          <span class="slider-bullet__text js-slider-bullet__text">02</span>
+          <span class="slider-bullet__line js-slider-bullet__line"></span>
+        </div>
+         <div class="slider-bullet js-slider-bullet">
+          <span class="slider-bullet__text js-slider-bullet__text">03</span>
+          <span class="slider-bullet__line js-slider-bullet__line"></span>
+        </div>
+      </nav>
+      
+      <div class="scroll js-scroll">Scroll</div>
+      
+    </div>
+    
+    <!--
+    <div class="vert-text">
+      <span>
+        Wings+Horns<br>
+        X Kyoto Black
+      </span>
+    </div>
+    -->
+
+		<script src="/src/js/main.js"></script>
+	</body>
+</html>
+
+<style>
+	html {
+    font-size: 16px;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    font-family: 'helvetica neue', helvetica, sans-serif;
+    overflow: hidden;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'font-2';
+    font-size: calc(0.5rem + 0.35vw);
+    z-index: 10;
+  }
+
+  .logo {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+  }
+    
+  .logo img {
+    display: block;
+    height: 1rem;
+    width: auto;
+  }
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 2rem;
+    z-index: 10;
+  }
+    
+  .nav--left {
+    left: 1rem;
+  }
+    
+  .nav--right {
+    right: 1rem;
+  }
+    
+  .nav ul {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+  }
+    
+  .nav li {
+    display: block;
+    margin: 0 1rem;
+    padding: 0;
+  }
+    
+  .nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: calc(0.5rem + 0.35vw);
+    font-family: 'helvetica neue', helvetica, sans-serif;
+  }
+      
+  .nav a span {
+    position: relative;
+  }
+        
+  .nav a span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: transform .75s ease;
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+      
+  .nav a:hover span:before,
+  .nav a.is-active span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .vert-text {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+    
+  .vert-text span {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    transform: rotate(-90deg) translateY(15rem);
+    transform-origin: bottom left;
+    font-size: 1.35rem;
+  }
+
+  .cart-total {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
+    margin-left: 1rem;
+  }
+
+  .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+    
+  .slider__text {
+    position: absolute;
+    bottom: calc(2rem + 3vw);
+    left: calc(2rem + 3vw);
+    z-index: 10;
+    font-size: calc(1rem + 4vw);
+    text-transform: uppercase;
+    transform-origin: top;
+    line-height: 1.075;
+    color: #fff;
+    font-weight: 500;
+  }
+      
+  .slider__text-line {
+    overflow: hidden;
+  }
+    
+  .slider__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+    
+  .slider__nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+    
+  .slider-bullet {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+      
+  .slider-bullet__text {
+    color: #fff;
+    font-size: 0.65rem;
+    margin-right: 1rem;
+  }
+      
+  .slider-bullet__line {
+    background-color: #fff;
+    height: 1px;
+    width: 1rem;
+  }
+    
+  .slider canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+    
+  .slide__content {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+    
+  .slide__img {
+    position: relative;
+    width: 25vw;
+    height: 70vh;
+    padding: 0;
+    margin: 0;
+    min-width: 12.5rem;
+    transform-origin: top;
+  }
+
+  .slide__img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+      
+  .slide__img:first-child {
+    top: -1.5rem;
+  }
+      
+  .slide__img:last-child {
+    bottom: -1.5rem;
+  }
+      
+  .slide__img img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide:nth-child(1) .slide__img {
+    display: none;
+  }
+</style>
