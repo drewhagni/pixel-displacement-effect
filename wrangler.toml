@@ -1,5 +1,2 @@
 name = "threejs-image-transitions"
 compatibility_date = "2025-08-28"
-
-[site]
-bucket = "./dist"
